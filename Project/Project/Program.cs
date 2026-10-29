@@ -1,3 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using Project.Presentation;
 
-Console.WriteLine("Hello, World!");
+HttpServer server = new  HttpServer();
+
+await server.StartAsync();
