@@ -9,8 +9,11 @@
 
     <ItemGroup>
       <Folder Include="Business\" />
-      <Folder Include="DataAccess\" />
       <Folder Include="Domain\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Npgsql" Version="10.0.3" />
     </ItemGroup>
 
 </Project>

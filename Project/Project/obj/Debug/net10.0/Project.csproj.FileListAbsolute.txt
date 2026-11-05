@@ -13,3 +13,8 @@
 /home/lukas/FH/3Sem/Swen/Swen_Project/Project/Project/obj/Debug/net10.0/Project.pdb
 /home/lukas/FH/3Sem/Swen/Swen_Project/Project/Project/obj/Debug/net10.0/Project.genruntimeconfig.cache
 /home/lukas/FH/3Sem/Swen/Swen_Project/Project/Project/obj/Debug/net10.0/ref/Project.dll
+/home/lukas/FH/3Sem/Swen/Swen_Project/Project/Project/bin/Debug/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/lukas/FH/3Sem/Swen/Swen_Project/Project/Project/bin/Debug/net10.0/Microsoft.Extensions.Logging.Abstractions.dll
+/home/lukas/FH/3Sem/Swen/Swen_Project/Project/Project/bin/Debug/net10.0/Npgsql.dll
+/home/lukas/FH/3Sem/Swen/Swen_Project/Project/Project/obj/Debug/net10.0/Project.csproj.AssemblyReference.cache
+/home/lukas/FH/3Sem/Swen/Swen_Project/Project/Project/obj/Debug/net10.0/Project.csproj.Up2Date

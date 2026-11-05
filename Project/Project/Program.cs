@@ -1,5 +1,10 @@
 ﻿using Project.Presentation;
+using Project.DataAccess;
 
-HttpServer server = new  HttpServer();
+// PostgreSQL-Verbindung testen
+await DatabaseConnection.TestConnection();
+
+// HTTP-Server starten
+HttpServer server = new HttpServer();
 
 await server.StartAsync();
