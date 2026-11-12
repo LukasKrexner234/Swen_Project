@@ -11,6 +11,24 @@ public static class DatabaseConnection
         "Username=postgres;" +
         "Password=mysecretpassword;";
 
+    // Neue Datenbankverbindung erstellen und öffnen
+    public static async Task<NpgsqlConnection> GetConnectionAsync()
+    {
+        var connection = new NpgsqlConnection(ConnectionString);
+
+        try
+        {
+            await connection.OpenAsync();
+
+            return connection;
+        }
+        catch
+        {
+            await connection.DisposeAsync();
+            throw;
+        }
+    }
+    
     public static async Task TestConnection()
     {
         await using var connection =
