@@ -5,8 +5,8 @@ namespace Project.DataAccess;
 public static class DatabaseConnection
 {
     private static readonly string ConnectionString =
-        "Host=localhost;" +
-        "Port=5433;" +
+        "Host=127.0.0.1;" +
+        "Port=5435;" +
         "Database=mrp;" +
         "Username=postgres;" +
         "Password=mysecretpassword;";
