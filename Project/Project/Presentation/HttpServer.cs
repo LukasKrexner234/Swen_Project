@@ -42,7 +42,7 @@ public class HttpServer
 
         try
         {
-            (int statusCode, string json) = _router.Route(request);
+            (int statusCode, string json) = await _router.RouteAsync(request);
 
             byte[] buffer = Encoding.UTF8.GetBytes(json);
 

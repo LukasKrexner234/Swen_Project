@@ -5,10 +5,14 @@ namespace Project.Presentation;
 
 public class Router
 {
-    public (int statusCode, string json) Route(HttpListenerRequest request)
+    private readonly AuthController _authController = new();
+
+    public async Task<(int statusCode, string json)> RouteAsync(HttpListenerRequest request)
     {
         string method = request.HttpMethod;
-        string path = request.Url?.AbsolutePath.TrimEnd('/') ?? "";
+
+        string path =
+            request.Url?.AbsolutePath.TrimEnd('/') ?? "";
 
         if (path == "")
         {
@@ -42,34 +46,19 @@ public class Router
         // POST /api/users/register
         if (method == "POST" && path == "/api/users/register")
         {
-            return (
-                501,
-                JsonSerializer.Serialize(new
-                {
-                    error = "Registration not implemented yet"
-                })
-            );
+            return await _authController.RegisterAsync(request);
         }
 
         // POST /api/users/login
         if (method == "POST" && path == "/api/users/login")
         {
-            return (
-                501,
-                JsonSerializer.Serialize(new
-                {
-                    error = "Login not implemented yet"
-                })
-            );
+            return await _authController.LoginAsync(request);
         }
 
         // Unknown endpoint
         return (
             404,
-            JsonSerializer.Serialize(new
-            {
-                error = "Endpoint not found"
-            })
+            """{"error":"Endpoint not found"}"""
         );
     }
 }
