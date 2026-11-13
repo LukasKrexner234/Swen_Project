@@ -43,6 +43,13 @@ public class HttpServer
         try
         {
             (int statusCode, string json) = await _router.RouteAsync(request);
+            
+            if (statusCode == 204)
+            {
+                response.StatusCode = 204;
+                response.ContentLength64 = 0;
+                return;
+            }
 
             byte[] buffer = Encoding.UTF8.GetBytes(json);
 
