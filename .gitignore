@@ -4,6 +4,7 @@
 
 # JetBrains Rider
 .idea/
+**/.idea/
 *.iml
 
 # Visual Studio
@@ -22,3 +23,6 @@
 # Betriebssystem
 .DS_Store
 Thumbs.db
+
+# Projektanforderungen
+MRP_Specification.pdf
