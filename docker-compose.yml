@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:17
+    container_name: mrp_postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: mrp
+
+    ports:
+      - "127.0.0.1:5435:5432"
+
+    volumes:
+      - mrp_pgdata:/var/lib/postgresql/data
+
+volumes:
+  mrp_pgdata:
+    name: mrp_pgdata
